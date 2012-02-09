@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/5686/ldapplugin/0.11
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/5686/ldapplugin/0.11/AUTHORS
+END
+setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/5686/ldapplugin/0.11/setup.py
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/5686/ldapplugin/0.11/COPYING
+END
+setup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/5685/ldapplugin/0.11/setup.cfg
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/plone/!svn/ver/33402/Products.PloneOrg/trunk/static/rules
+END
+default.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/plone/!svn/ver/33402/Products.PloneOrg/trunk/static/rules/default.xml
+END
+trac.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/plone/!svn/ver/26985/Products.PloneOrg/trunk/static/rules/trac.xml
+END
+default-extra.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/plone/!svn/ver/26034/Products.PloneOrg/trunk/static/rules/default-extra.xsl
+END

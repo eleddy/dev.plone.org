@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/weblion/!svn/ver/7260/weblion/cianotificationplugin/trunk/cianotification
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/weblion/!svn/ver/7259/weblion/cianotificationplugin/trunk/cianotification/__init__.py
+END
+notifier.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/weblion/!svn/ver/7260/weblion/cianotificationplugin/trunk/cianotification/notifier.py
+END

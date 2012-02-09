@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: LdapPlugin
+Version: 0.6.0dev-r5686
+Summary: LDAP extensions for Trac 0.12
+Home-page: http://trac-hacks.org/wiki/LdapPlugin
+Author: Emmanuel Blot
+Author-email: emmanuel.blot@free.fr
+License: BSD
+Description: UNKNOWN
+Keywords: trac ldap permission group acl
+Platform: UNKNOWN

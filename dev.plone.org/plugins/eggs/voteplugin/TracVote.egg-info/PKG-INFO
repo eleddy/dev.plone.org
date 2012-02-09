@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: TracVote
+Version: 0.1.3
+Summary: A plugin for voting on Trac resources.
+Home-page: http://trac-hacks.org/wiki/VotePlugin
+Author: Ryan J Ollos
+Author-email: ryano@physiosonics.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

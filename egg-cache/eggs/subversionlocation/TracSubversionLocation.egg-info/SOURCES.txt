@@ -1,0 +1,10 @@
+README.txt
+setup.py
+TracSubversionLocation.egg-info/PKG-INFO
+TracSubversionLocation.egg-info/SOURCES.txt
+TracSubversionLocation.egg-info/dependency_links.txt
+TracSubversionLocation.egg-info/entry_points.txt
+TracSubversionLocation.egg-info/requires.txt
+TracSubversionLocation.egg-info/top_level.txt
+subversionlocation/__init__.py
+subversionlocation/web_ui.py

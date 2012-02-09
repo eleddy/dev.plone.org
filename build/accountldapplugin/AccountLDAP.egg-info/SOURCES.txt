@@ -1,0 +1,13 @@
+.project
+NEWS.TXT
+README.TXT
+setup.py
+.settings/org.eclipse.core.resources.prefs
+AccountLDAP.egg-info/PKG-INFO
+AccountLDAP.egg-info/SOURCES.txt
+AccountLDAP.egg-info/dependency_links.txt
+AccountLDAP.egg-info/entry_points.txt
+AccountLDAP.egg-info/top_level.txt
+accountldap/__init__.py
+accountldap/accountldap.py
+accountldap/templates/accountldap.html

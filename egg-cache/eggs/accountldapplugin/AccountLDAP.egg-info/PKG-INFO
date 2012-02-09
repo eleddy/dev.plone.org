@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: AccountLDAP
+Version: 0.32
+Summary: Integrate account trac user with properties defined in LDAP.
+Home-page: http://trac-hacks.org/wiki/AccountLDAP
+Author: Carlos López Pérez
+Author-email: carlos.lopezperez@gmail.com
+License: LGPL
+Description: Integrate account trac user with properties defined in LDAP.
+Keywords: trac plugin ldap account
+Platform: UNKNOWN

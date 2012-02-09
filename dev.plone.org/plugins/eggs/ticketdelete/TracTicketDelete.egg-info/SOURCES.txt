@@ -1,0 +1,12 @@
+setup.py
+TracTicketDelete.egg-info/PKG-INFO
+TracTicketDelete.egg-info/SOURCES.txt
+TracTicketDelete.egg-info/dependency_links.txt
+TracTicketDelete.egg-info/entry_points.txt
+TracTicketDelete.egg-info/top_level.txt
+ticketdelete/__init__.py
+ticketdelete/web_ui.py
+ticketdelete/htdocs/jquery.js
+ticketdelete/htdocs/ticketdelete.css
+ticketdelete/htdocs/ticketdelete.js
+ticketdelete/templates/ticketdelete_admin.html

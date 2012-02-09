@@ -1,0 +1,10 @@
+README
+setup.py
+TracOpenIDDelegate.egg-info/PKG-INFO
+TracOpenIDDelegate.egg-info/SOURCES.txt
+TracOpenIDDelegate.egg-info/dependency_links.txt
+TracOpenIDDelegate.egg-info/entry_points.txt
+TracOpenIDDelegate.egg-info/requires.txt
+TracOpenIDDelegate.egg-info/top_level.txt
+openiddelegate/__init__.py
+openiddelegate/filter.py

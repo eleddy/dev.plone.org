@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: TracTicketDelete
+Version: 2.0.1
+Summary: Remove tickets and ticket changes from Trac.
+Home-page: http://trac-hacks.org/wiki/TicketDeletePlugin
+Author: Noah Kantrowitz
+Author-email: noah@coderanger.net
+License: BSD
+Description: Provides a web interface to removing whole tickets and ticket changes in Trac.
+Keywords: trac plugin ticket delete
+Platform: UNKNOWN
+Classifier: Framework :: Trac

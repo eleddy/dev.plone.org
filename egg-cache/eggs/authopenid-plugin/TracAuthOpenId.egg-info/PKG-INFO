@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: TracAuthOpenId
+Version: 0.3.1dev
+Summary: OpenID plugin for Trac
+Home-page: http://bitbucket.org/Dalius/authopenid-plugin/overview/
+Author: Dalius Dobravolskas
+Author-email: dalius@sandbox.lt
+License: Trac license
+Description: UNKNOWN
+Platform: UNKNOWN

@@ -1,0 +1,14 @@
+SqlQueryForReport.txt
+setup.py
+TracVote.egg-info/PKG-INFO
+TracVote.egg-info/SOURCES.txt
+TracVote.egg-info/dependency_links.txt
+TracVote.egg-info/entry_points.txt
+TracVote.egg-info/top_level.txt
+tracvote/__init__.py
+tracvote/htdocs/adowngray.png
+tracvote/htdocs/adownmod.png
+tracvote/htdocs/aupgray.png
+tracvote/htdocs/aupmod.png
+tracvote/htdocs/css/tracvote.css
+tracvote/htdocs/js/tracvote.js

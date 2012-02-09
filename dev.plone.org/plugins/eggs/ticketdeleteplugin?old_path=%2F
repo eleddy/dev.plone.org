@@ -1,0 +1,5799 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Diff from /@10373 to ticketdeleteplugin@10373 - Trac Hacks - Plugins Macros etc. - Trac</title><link rel="start" href="/wiki" /><link rel="search" href="/search" /><link rel="help" href="/wiki/TracGuide" /><link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/redirect/css/redirect.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/changeset.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/diff.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/code.css" type="text/css" /><link rel="stylesheet" href="/pygments/trac.css" /><link rel="icon" href="/favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /><link rel="alternate" href="?format=diff&amp;new=10373&amp;old=10373&amp;new_path=ticketdeleteplugin&amp;old_path=%2F" title="Unified Diff" type="text/plain" /><link rel="alternate" href="?format=zip&amp;new=10373&amp;old=10373&amp;new_path=ticketdeleteplugin&amp;old_path=%2F" title="Zip Archive" type="application/zip" /><style type="text/css">/* vim: syntax=css
+*/
+form, input, body {
+	background-image: url(/chrome/site/trachacks_bg.png);
+	background-position: 64px 64px;
+}
+
+#ticket form {
+	background-image: none;
+}
+
+form#search {
+	background: transparent;
+}
+
+pre, tt {
+	color: #600;
+}
+
+.ext-link {
+	background-image: none;
+	padding-left: 0px;
+	border-bottom: solid 1px;
+}
+
+/* For Mozilla and Safari */
+*>#content {
+	padding: 0;
+	margin: 15px 15px 0 15px;
+	text-align: left;
+	min-height: 770px;
+}
+
+/* For IE */
+* html #content {
+	padding: 0;
+	margin: 15px 15px 0 15px;
+	text-align: left;
+	height: 770px;
+}
+
+#newsflash {
+	border: solid 2px #8f8;
+	width: 400px;
+	float: right;
+	background: #dfd;
+	font-size: 0.8em;
+	margin: 0em;
+	margin-left: 1em;
+	padding: 0.5em 1em 0.5em 1em;
+}
+
+#newsflash h1 {
+	font-size: 1.2em;
+	padding: 0em;
+	margin: 0em;
+}
+
+#newsflash .post hr {
+	display: none;
+}
+
+span.tagcount {
+	color: #999;
+	font-size: 0.6em;
+	vertical-align: middle;
+}
+
+#newticketguide {
+ background: #fdc;
+ border: 2px solid #d00;
+ font-style: italic;
+ padding: 0 .5em;
+ margin: 1em 0;
+ text-align: center;
+}
+
+#newticketguide h1 {
+	font-variant: small-caps;
+	letter-spacing: 0.3em;
+	font-weight: bold;
+}
+
+#newticketguide hr {
+	padding: 0;
+	margin: 1em auto;
+	width: 40%;
+	text-align: center;
+	border: 1px dotted #d00;
+}
+</style>
+ <script type="text/javascript" src="/chrome/common/js/trac.js"></script>
+</head>
+<body>
+
+
+<div id="banner">
+
+<div id="header"><a id="logo" href="http://trac-hacks.org/"><img src="/chrome/site/trachacks_banner.png" width="300" height="73" alt="Trac Hacks" /></a><hr /></div>
+
+<form id="search" action="/search" method="get">
+ <div>
+  <label for="proj-search">Search:</label>
+  <input type="text" id="proj-search" name="q" size="10" accesskey="f" value="" />
+  <input type="submit" value="Search" />
+  <input type="hidden" name="wiki" value="on" />
+  <input type="hidden" name="changeset" value="on" />
+  <input type="hidden" name="ticket" value="on" />
+ </div>
+</form>
+
+
+
+<div id="metanav" class="nav"><ul><li class="first"><a href="/login">Login</a></li><li><a href="/settings">Settings</a></li><li><a accesskey="6" href="/wiki/TracGuide">Help/Guide</a></li><li><a href="/about">About Trac</a></li><li><a href="/register">Register</a></li><li class="last"><a href="/reset_password">Forgot your password?</a></li></ul></div>
+</div>
+
+<div id="mainnav" class="nav"><ul><li class="first"><a accesskey="1" href="/wiki">Wiki</a></li><li><a accesskey="2" href="/timeline">Timeline</a></li><li class="active"><a href="/browser">Browse Source</a></li><li><a href="/report">View Tickets</a></li><li><a accesskey="7" href="/newticket">New Ticket</a></li><li><a accesskey="4" href="/search">Search</a></li><li><a href="/tags" accesskey="T">Tags</a></li><li class="last"><a href="/blog">Blog</a></li></ul></div>
+<div id="main">
+
+
+
+
+<div id="ctxtnav" class="nav">
+ <h2>Navigation</h2>
+  <ul>
+    <li class="last"><a href="/changeset/10373/?old=10373&amp;old_path=ticketdeleteplugin">Reverse Diff</a></li>
+  </ul>
+</div>
+
+<div id="content" class="changeset">
+ <div id="title">
+    <h1>Changes from <a title="Show entry in browser" href="/browser/?rev=10373">
+      /</a> 
+     at <a title="Show full changeset" href="/changeset/10373">
+      r10373</a>
+     to <a title="Show entry in browser" href="/browser/ticketdeleteplugin?rev=10373">
+     ticketdeleteplugin</a> 
+     at <a title="Show full changeset" href="/changeset/10373">
+     r10373</a>
+    </h1>
+ </div>
+
+
+
+
+
+<dl id="overview">
+ <dt class="property files">
+   Files:
+ </dt>
+ <dd class="files">
+  <ul>
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.11?rev=9692">ticketdeleteplugin/0.11</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.11/ticketdelete?rev=9692">ticketdeleteplugin/0.11/ticketdelete</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.11/ticketdelete/web_ui.py?rev=9692">ticketdeleteplugin/0.11/ticketdelete/web_ui.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.11/ticketdelete/htdocs?rev=6926">ticketdeleteplugin/0.11/ticketdelete/htdocs</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.11/ticketdelete/htdocs/ticketdelete.js?rev=6926">ticketdeleteplugin/0.11/ticketdelete/htdocs/ticketdelete.js</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/htdocs/jquery.js?rev=1270">ticketdeleteplugin/0.11/ticketdelete/htdocs/jquery.js</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/htdocs/ticketdelete.css?rev=1271">ticketdeleteplugin/0.11/ticketdelete/htdocs/ticketdelete.css</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9/ticketdelete/__init__.py?rev=501">ticketdeleteplugin/0.11/ticketdelete/__init__.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.11/ticketdelete/templates?rev=9692">ticketdeleteplugin/0.11/ticketdelete/templates</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.11/ticketdelete/templates/ticketdelete_admin.html?rev=9692">ticketdeleteplugin/0.11/ticketdelete/templates/ticketdelete_admin.html</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.11/setup.py?rev=9692">ticketdeleteplugin/0.11/setup.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9?rev=3416">ticketdeleteplugin/0.9</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9/ticketdelete?rev=797">ticketdeleteplugin/0.9/ticketdelete</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9/ticketdelete/web_ui.py?rev=797">ticketdeleteplugin/0.9/ticketdelete/web_ui.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9/ticketdelete/__init__.py?rev=501">ticketdeleteplugin/0.9/ticketdelete/__init__.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9/ticketdelete/templates?rev=577">ticketdeleteplugin/0.9/ticketdelete/templates</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9/ticketdelete/templates/ticketdelete_admin.cs?rev=577">ticketdeleteplugin/0.9/ticketdelete/templates/ticketdelete_admin.cs</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9/setup.py?rev=3416">ticketdeleteplugin/0.9/setup.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10?rev=3416">ticketdeleteplugin/0.10</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete?rev=1542">ticketdeleteplugin/0.10/ticketdelete</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/web_ui.py?rev=1542">ticketdeleteplugin/0.10/ticketdelete/web_ui.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/htdocs?rev=1273">ticketdeleteplugin/0.10/ticketdelete/htdocs</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/htdocs/ticketdelete.js?rev=1273">ticketdeleteplugin/0.10/ticketdelete/htdocs/ticketdelete.js</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/htdocs/jquery.js?rev=1270">ticketdeleteplugin/0.10/ticketdelete/htdocs/jquery.js</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/htdocs/ticketdelete.css?rev=1271">ticketdeleteplugin/0.10/ticketdelete/htdocs/ticketdelete.css</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.9/ticketdelete/__init__.py?rev=501">ticketdeleteplugin/0.10/ticketdelete/__init__.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/templates?rev=1377">ticketdeleteplugin/0.10/ticketdelete/templates</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/ticketdelete/templates/ticketdelete_admin.cs?rev=1377">ticketdeleteplugin/0.10/ticketdelete/templates/ticketdelete_admin.cs</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="add"></div>
+   <a title="Show entry in browser" href="/browser/ticketdeleteplugin/0.10/setup.py?rev=3416">ticketdeleteplugin/0.10/setup.py</a>
+  <span class="comment">(added)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4117)" href="/browser/blogpartsmacro?rev=4117">/blogpartsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1446)" href="/browser/wikioutputstreamplugin?rev=1446">/wikioutputstreamplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2572)" href="/browser/camelcaseintegration?rev=2572">/camelcaseintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2237)" href="/browser/ticketninjaplugin?rev=2237">/ticketninjaplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5248)" href="/browser/wikifyanythingplugin?rev=5248">/wikifyanythingplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5040)" href="/browser/topmacro?rev=5040">/topmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8781)" href="/browser/djangointegrationplugin?rev=8781">/djangointegrationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8549)" href="/browser/listofwikipagesmacro?rev=8549">/listofwikipagesmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3153)" href="/browser/tracsvnpoliciesplugin?rev=3153">/tracsvnpoliciesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3715)" href="/browser/openiddelegateplugin?rev=3715">/openiddelegateplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8474)" href="/browser/voteplugin?rev=8474">/voteplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8522)" href="/browser/insertelementmacro?rev=8522">/insertelementmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/gitwebplugin?rev=3416">/gitwebplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2978)" href="/browser/ircannouncerplugin?rev=2978">/ircannouncerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3095)" href="/browser/restrictkeywordsplugin?rev=3095">/restrictkeywordsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10368)" href="/browser/customfieldadminplugin?rev=10368">/customfieldadminplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5523)" href="/browser/tracunreadplugin?rev=5523">/tracunreadplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2598)" href="/browser/flashviewplugin?rev=2598">/flashviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9957)" href="/browser/tractickettemplateplugin?rev=9957">/tractickettemplateplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6445)" href="/browser/insidetracpluginintegration?rev=6445">/insidetracpluginintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2034)" href="/browser/createprojectplugin?rev=2034">/createprojectplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5569)" href="/browser/tracsentinelplugin?rev=5569">/tracsentinelplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7228)" href="/browser/autoqueryplugin?rev=7228">/autoqueryplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1857)" href="/browser/publishrevertplugin?rev=1857">/publishrevertplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6788)" href="/browser/htgroupeditorplugin?rev=6788">/htgroupeditorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 258)" href="/browser/galleryplugin?rev=258">/galleryplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1973)" href="/browser/renameusersscript?rev=1973">/renameusersscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6280)" href="/browser/subscriberlistplugin?rev=6280">/subscriberlistplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10183)" href="/browser/settingsplugin?rev=10183">/settingsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9909)" href="/browser/traceabilitymatrixplugin?rev=9909">/traceabilitymatrixplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3826)" href="/browser/sqlitetopgscript?rev=3826">/sqlitetopgscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10083)" href="/browser/flexibleassigntoplugin?rev=10083">/flexibleassigntoplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10092)" href="/browser/ticketextplugin?rev=10092">/ticketextplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9437)" href="/browser/parametrizedtemplatesplugin?rev=9437">/parametrizedtemplatesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7903)" href="/browser/macrochainmacro?rev=7903">/macrochainmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7736)" href="/browser/ticketbacklinksmacro?rev=7736">/ticketbacklinksmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2555)" href="/browser/osxrssdashboardwidgetleopardintegration?rev=2555">/osxrssdashboardwidgetleopardintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6466)" href="/browser/tickettortmplugin?rev=6466">/tickettortmplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7714)" href="/browser/crystalxtheme?rev=7714">/crystalxtheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7488)" href="/browser/contactsplugin?rev=7488">/contactsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8746)" href="/browser/addcommentmacro?rev=8746">/addcommentmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9444)" href="/browser/valuepropagationplugin?rev=9444">/valuepropagationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10015)" href="/browser/projectplanplugin?rev=10015">/projectplanplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1672)" href="/browser/imagelistmacro?rev=1672">/imagelistmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4388)" href="/browser/svnchangelistenerplugin?rev=4388">/svnchangelistenerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3831)" href="/browser/skittlishtheme?rev=3831">/skittlishtheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10229)" href="/browser/teamcitypluginintegration?rev=10229">/teamcitypluginintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 639)" href="/browser/newhackmacro?rev=639">/newhackmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 307)" href="/browser/svnpostcommitcreateversionscript?rev=307">/svnpostcommitcreateversionscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8571)" href="/browser/googlestaticmapmacro?rev=8571">/googlestaticmapmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4141)" href="/browser/detailedrssfeedplugin?rev=4141">/detailedrssfeedplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3755)" href="/browser/foldmacro?rev=3755">/foldmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5003)" href="/browser/wikilastmodifiedpatch?rev=5003">/wikilastmodifiedpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8286)" href="/browser/tracgitosisplugin?rev=8286">/tracgitosisplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3718)" href="/browser/ticketboxplugin?rev=3718">/ticketboxplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 634)" href="/browser/wikirbacpatch?rev=634">/wikirbacpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4175)" href="/browser/newsflashmacro?rev=4175">/newsflashmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 667)" href="/browser/navmoverplugin?rev=667">/navmoverplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9860)" href="/browser/tracunixgroupsplugin?rev=9860">/tracunixgroupsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3372)" href="/browser/backrefpatch?rev=3372">/backrefpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5986)" href="/browser/wikiimportplugin?rev=5986">/wikiimportplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/combinewikiplugin?rev=3416">/combinewikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10356)" href="/browser/ticketconditionalcreationstatusplugin?rev=10356">/ticketconditionalcreationstatusplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 627)" href="/browser/wikirenamescript?rev=627">/wikirenamescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3388)" href="/browser/tracontwikicontribintegration?rev=3388">/tracontwikicontribintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9972)" href="/browser/tracticketchangelogplugin?rev=9972">/tracticketchangelogplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8464)" href="/browser/ticketstatsmacro?rev=8464">/ticketstatsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4354)" href="/browser/textmatebundle?rev=4354">/textmatebundle</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7088)" href="/browser/contactinfoplugin?rev=7088">/contactinfoplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7902)" href="/browser/tractoprojectintegration?rev=7902">/tractoprojectintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10308)" href="/browser/childticketsplugin?rev=10308">/childticketsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5483)" href="/browser/gamedevtheme?rev=5483">/gamedevtheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2348)" href="/browser/customroadmapplugin?rev=2348">/customroadmapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8063)" href="/browser/tracimagesvgmacro?rev=8063">/tracimagesvgmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 687)" href="/browser/excelviewerplugin?rev=687">/excelviewerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6275)" href="/browser/sharedcookieauthplugin?rev=6275">/sharedcookieauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9844)" href="/browser/addheadersplugin?rev=9844">/addheadersplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2901)" href="/browser/addressplugin?rev=2901">/addressplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9678)" href="/browser/tracpasteplugin?rev=9678">/tracpasteplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9423)" href="/browser/tracreportinplaceeditplugin?rev=9423">/tracreportinplaceeditplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10373)" href="/browser/wikiextrasplugin?rev=10373">/wikiextrasplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8488)" href="/browser/ticketchartsmacro?rev=8488">/ticketchartsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2301)" href="/browser/changesetfeedfilterplugin?rev=2301">/changesetfeedfilterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8887)" href="/browser/svnauthzadminplugin?rev=8887">/svnauthzadminplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1331)" href="/browser/roadmapboxmacro?rev=1331">/roadmapboxmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4963)" href="/browser/trachotbackupscript?rev=4963">/trachotbackupscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8234)" href="/browser/sensitiveticketsplugin?rev=8234">/sensitiveticketsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7519)" href="/browser/smallsearchmacro?rev=7519">/smallsearchmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3463)" href="/browser/tracmathplugin?rev=3463">/tracmathplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7123)" href="/browser/trachgrceditplugin?rev=7123">/trachgrceditplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8625)" href="/browser/acidtheme?rev=8625">/acidtheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5485)" href="/browser/irresistibletheme?rev=5485">/irresistibletheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9868)" href="/browser/bookmarkplugin?rev=9868">/bookmarkplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5302)" href="/browser/tracticketdepgraphplugin?rev=5302">/tracticketdepgraphplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/cachesystemplugin?rev=3416">/cachesystemplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6496)" href="/browser/basicthemeeditorplugin?rev=6496">/basicthemeeditorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2526)" href="/browser/manualtestingplugin?rev=2526">/manualtestingplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7444)" href="/browser/tracldapauthplugin?rev=7444">/tracldapauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9700)" href="/browser/secureticketsplugin?rev=9700">/secureticketsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7768)" href="/browser/geoticketplugin?rev=7768">/geoticketplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9920)" href="/browser/browsersvnoperationsplugin?rev=9920">/browsersvnoperationsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1734)" href="/browser/refmacro?rev=1734">/refmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5912)" href="/browser/forcecommentplugin?rev=5912">/forcecommentplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2844)" href="/browser/nikonikoplugin?rev=2844">/nikonikoplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1357)" href="/browser/regexincludemacro?rev=1357">/regexincludemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2930)" href="/browser/twikinatskintheme?rev=2930">/twikinatskintheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7757)" href="/browser/gitplugin?rev=7757">/gitplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4791)" href="/browser/typedticketworkflowplugin?rev=4791">/typedticketworkflowplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4273)" href="/browser/flexiblereporternotificationplugin?rev=4273">/flexiblereporternotificationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10209)" href="/browser/tracblockdiagplugin?rev=10209">/tracblockdiagplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1023)" href="/browser/navaddplugin?rev=1023">/navaddplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/serverdownmacro?rev=3416">/serverdownmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2248)" href="/browser/wikipublicpatch?rev=2248">/wikipublicpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6077)" href="/browser/accessmacro?rev=6077">/accessmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9693)" href="/browser/wikiexportplugin?rev=9693">/wikiexportplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9703)" href="/browser/ticketmodifiedfilesplugin?rev=9703">/ticketmodifiedfilesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7830)" href="/browser/schedulerplugin?rev=7830">/schedulerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7751)" href="/browser/traclistticketsscript?rev=7751">/traclistticketsscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2622)" href="/browser/tracgooglesearchscript?rev=2622">/tracgooglesearchscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8118)" href="/browser/ohlohwidgetsmacroplugin?rev=8118">/ohlohwidgetsmacroplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10051)" href="/browser/notifyallusersplugin?rev=10051">/notifyallusersplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7066)" href="/browser/captchaauthplugin?rev=7066">/captchaauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/intrablogtheme?rev=3416">/intrablogtheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2483)" href="/browser/mediawikipluginmacro?rev=2483">/mediawikipluginmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3693)" href="/browser/includemacro?rev=3693">/includemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4357)" href="/browser/keywordsuggestplugin?rev=4357">/keywordsuggestplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/syscssplugin?rev=3416">/syscssplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8362)" href="/browser/odtexportplugin?rev=8362">/odtexportplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3950)" href="/browser/growlplugin?rev=3950">/growlplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9664)" href="/browser/reposearchplugin?rev=9664">/reposearchplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6587)" href="/browser/agiloticketreportplugin?rev=6587">/agiloticketreportplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6277)" href="/browser/ticketguidelinesplugin?rev=6277">/ticketguidelinesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4455)" href="/browser/zoomquiettranslation?rev=4455">/zoomquiettranslation</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/simpleticketplugin?rev=3416">/simpleticketplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10248)" href="/browser/tickettreeplugin?rev=10248">/tickettreeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9784)" href="/browser/duplicateticketsearchplugin?rev=9784">/duplicateticketsearchplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3186)" href="/browser/testhackplugin?rev=3186">/testhackplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/tracblplugin?rev=3416">/tracblplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3739)" href="/browser/sfntotracscript?rev=3739">/sfntotracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5451)" href="/browser/pydotorgtheme?rev=5451">/pydotorgtheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9342)" href="/browser/noticemanagerplugin?rev=9342">/noticemanagerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2176)" href="/browser/metasearchplugin?rev=2176">/metasearchplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5199)" href="/browser/qatrackerplugin?rev=5199">/qatrackerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10301)" href="/browser/wikigoodiesplugin?rev=10301">/wikigoodiesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2185)" href="/browser/tracattachscript?rev=2185">/tracattachscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10177)" href="/browser/worklogplugin?rev=10177">/worklogplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4880)" href="/browser/trachtmlnotificationpatch?rev=4880">/trachtmlnotificationpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3077)" href="/browser/vstracintegration?rev=3077">/vstracintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1979)" href="/browser/scrumplugin?rev=1979">/scrumplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1374)" href="/browser/treeviewplugin?rev=1374">/treeviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9773)" href="/browser/acronymsplugin?rev=9773">/acronymsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2061)" href="/browser/authzgroupsplugin?rev=2061">/authzgroupsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9683)" href="/browser/tasklistplugin?rev=9683">/tasklistplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8268)" href="/browser/tracbasicmacro?rev=8268">/tracbasicmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8614)" href="/browser/urldefenderplugin?rev=8614">/urldefenderplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2653)" href="/browser/guestbookplugin?rev=2653">/guestbookplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2540)" href="/browser/phpbugtracker2tracscript?rev=2540">/phpbugtracker2tracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1011)" href="/browser/helloplugin?rev=1011">/helloplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4990)" href="/browser/tracwikitohtmlconverterscript?rev=4990">/tracwikitohtmlconverterscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3094)" href="/browser/chartreportgeneratorplugin?rev=3094">/chartreportgeneratorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2013)" href="/browser/wikitoolbartemplatespatch?rev=2013">/wikitoolbartemplatespatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4349)" href="/browser/testcasemanagementplugin?rev=4349">/testcasemanagementplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7199)" href="/browser/tagpublicplugin?rev=7199">/tagpublicplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10366)" href="/browser/stickyticketplugin?rev=10366">/stickyticketplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7856)" href="/browser/filelistplugin?rev=7856">/filelistplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3869)" href="/browser/simplecaptchaplugin?rev=3869">/simplecaptchaplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8267)" href="/browser/mathcaptchaplugin?rev=8267">/mathcaptchaplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9870)" href="/browser/diskusageplugin?rev=9870">/diskusageplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9849)" href="/browser/latexmacro?rev=9849">/latexmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/caseinsensitivewikiplugin?rev=3416">/caseinsensitivewikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6483)" href="/browser/gringottsplugin?rev=6483">/gringottsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2113)" href="/browser/tracpygmentsplugin?rev=2113">/tracpygmentsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9405)" href="/browser/tracgenericworkflowplugin?rev=9405">/tracgenericworkflowplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7771)" href="/browser/moviemacro?rev=7771">/moviemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5031)" href="/browser/inigetmacro?rev=5031">/inigetmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5972)" href="/browser/pygamewebtheme?rev=5972">/pygamewebtheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5471)" href="/browser/tracuserpageplugin?rev=5471">/tracuserpageplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1604)" href="/browser/traczillaplugin?rev=1604">/traczillaplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8520)" href="/browser/backlinksmenumacro?rev=8520">/backlinksmenumacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9656)" href="/browser/ticketchangeplugin?rev=9656">/ticketchangeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10047)" href="/browser/downloadsplugin?rev=10047">/downloadsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3692)" href="/browser/hackergotchiplugin?rev=3692">/hackergotchiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/sitewikidefaultplugin?rev=3416">/sitewikidefaultplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8129)" href="/browser/nevernotifyupdaterplugin?rev=8129">/nevernotifyupdaterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8327)" href="/browser/gridmodifyplugin?rev=8327">/gridmodifyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10159)" href="/browser/tracrussiantranslation?rev=10159">/tracrussiantranslation</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3285)" href="/browser/cleverboxscript?rev=3285">/cleverboxscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10017)" href="/browser/nukeuserplugin?rev=10017">/nukeuserplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6675)" href="/browser/httpauthplugin?rev=6675">/httpauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8503)" href="/browser/visitcountermacro?rev=8503">/visitcountermacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10317)" href="/browser/tracwikimenuplugin?rev=10317">/tracwikimenuplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7478)" href="/browser/trachacksplugin?rev=7478">/trachacksplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7121)" href="/browser/sixhatsmacroplugin?rev=7121">/sixhatsmacroplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 700)" href="/browser/bugzillaissuetrackingplugin?rev=700">/bugzillaissuetrackingplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9970)" href="/browser/xmlrpcplugin?rev=9970">/xmlrpcplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9197)" href="/browser/renameuserplugin?rev=9197">/renameuserplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9581)" href="/browser/wikiincludeplugin?rev=9581">/wikiincludeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5287)" href="/browser/condfieldsplugin?rev=5287">/condfieldsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8477)" href="/browser/highlightmacro?rev=8477">/highlightmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10112)" href="/browser/traccrowdauthplugin?rev=10112">/traccrowdauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9817)" href="/browser/trachoursplugin?rev=9817">/trachoursplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8369)" href="/browser/wikiformsplugin?rev=8369">/wikiformsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7596)" href="/browser/timelineuserfilterplugin?rev=7596">/timelineuserfilterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3860)" href="/browser/agiloforscrumplugin?rev=3860">/agiloforscrumplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9159)" href="/browser/wikicssplugin?rev=9159">/wikicssplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4041)" href="/browser/phpbbauthplugin?rev=4041">/phpbbauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8248)" href="/browser/quickticketplugin?rev=8248">/quickticketplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3096)" href="/browser/pythontracloghandlerintegration?rev=3096">/pythontracloghandlerintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5423)" href="/browser/dropbearsplugin?rev=5423">/dropbearsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9783)" href="/browser/fivestarvoteplugin?rev=9783">/fivestarvoteplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5073)" href="/browser/timelinerssauthorpatch?rev=5073">/timelinerssauthorpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2646)" href="/browser/tracsvnhooksplugin?rev=2646">/tracsvnhooksplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3448)" href="/browser/pagevariablemacro?rev=3448">/pagevariablemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7733)" href="/browser/tracusersyncplugin?rev=7733">/tracusersyncplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7336)" href="/browser/userstatsmacro?rev=7336">/userstatsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8482)" href="/browser/listtracprojectsmacro?rev=8482">/listtracprojectsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2421)" href="/browser/tracdefaulttheme?rev=2421">/tracdefaulttheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7185)" href="/browser/logviewerplugin?rev=7185">/logviewerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7496)" href="/browser/arbitraryprojectpropertiespatch?rev=7496">/arbitraryprojectpropertiespatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10257)" href="/browser/cloudplugin?rev=10257">/cloudplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10336)" href="/browser/timingandestimationplugin?rev=10336">/timingandestimationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6116)" href="/browser/tracopenthreeoneoneplugin?rev=6116">/tracopenthreeoneoneplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8490)" href="/browser/abbrmacro?rev=8490">/abbrmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3007)" href="/browser/ticketcreationstatusplugin?rev=3007">/ticketcreationstatusplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9666)" href="/browser/multiselectcustomfieldspatch?rev=9666">/multiselectcustomfieldspatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8551)" href="/browser/numberedheadlinesplugin?rev=8551">/numberedheadlinesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5089)" href="/browser/tracsqlalchemybridgeintegration?rev=5089">/tracsqlalchemybridgeintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/paginateticketsplugin?rev=3416">/paginateticketsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7497)" href="/browser/adjectorintegration?rev=7497">/adjectorintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2243)" href="/browser/headlinkmacro?rev=2243">/headlinkmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8153)" href="/browser/wikicreolerendererplugin?rev=8153">/wikicreolerendererplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 443)" href="/browser/tracreminderscript?rev=443">/tracreminderscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6012)" href="/browser/ticketsidebarproviderplugin?rev=6012">/ticketsidebarproviderplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6398)" href="/browser/tracschedulerplugin?rev=6398">/tracschedulerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5526)" href="/browser/customfieldproviderplugin?rev=5526">/customfieldproviderplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 119)" href="/browser/downloadstatsmacro?rev=119">/downloadstatsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7784)" href="/browser/inputfieldtrapplugin?rev=7784">/inputfieldtrapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 446)" href="/browser/tinymcewikiplugin?rev=446">/tinymcewikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4723)" href="/browser/eclipsetracplugin?rev=4723">/eclipsetracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9455)" href="/browser/ganttchartplugin?rev=9455">/ganttchartplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/navhiderplugin?rev=3416">/navhiderplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 257)" href="/browser/emoticonsplugin?rev=257">/emoticonsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6136)" href="/browser/sslauthenticationplugin?rev=6136">/sslauthenticationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9814)" href="/browser/privateticketsplugin?rev=9814">/privateticketsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5708)" href="/browser/timelinecheckinfilterplugin?rev=5708">/timelinecheckinfilterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10046)" href="/browser/planetforgeimportexportplugin?rev=10046">/planetforgeimportexportplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10027)" href="/browser/motdplugin?rev=10027">/motdplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7918)" href="/browser/mactheme?rev=7918">/mactheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7511)" href="/browser/backlinksmacro?rev=7511">/backlinksmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2632)" href="/browser/ezproducescript?rev=2632">/ezproducescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3325)" href="/browser/vibrantinkcodetheme?rev=3325">/vibrantinkcodetheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9271)" href="/browser/freedocplugin?rev=9271">/freedocplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2912)" href="/browser/wikicompatplugin?rev=2912">/wikicompatplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7799)" href="/browser/phpdocplugin?rev=7799">/phpdocplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9954)" href="/browser/nonotifytimingpatch?rev=9954">/nonotifytimingpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2594)" href="/browser/tracspanishtranslation?rev=2594">/tracspanishtranslation</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9285)" href="/browser/trackeywordsplugin?rev=9285">/trackeywordsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2417)" href="/browser/tracdutchtranslation?rev=2417">/tracdutchtranslation</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3956)" href="/browser/doapviewmacro?rev=3956">/doapviewmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 260)" href="/browser/neweggscript?rev=260">/neweggscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10364)" href="/browser/translatedpagesmacro?rev=10364">/translatedpagesmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9937)" href="/browser/ticketlastcommentjumpplugin?rev=9937">/ticketlastcommentjumpplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9441)" href="/browser/ticketcreatebuttonsplugin?rev=9441">/ticketcreatebuttonsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9687)" href="/browser/whiteboardplugin?rev=9687">/whiteboardplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2059)" href="/browser/wikiwygplugin?rev=2059">/wikiwygplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9626)" href="/browser/wikisearchmacro?rev=9626">/wikisearchmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3513)" href="/browser/trashtalkplugin?rev=3513">/trashtalkplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7096)" href="/browser/accountldapplugin?rev=7096">/accountldapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7516)" href="/browser/ticketboxmacro?rev=7516">/ticketboxmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10234)" href="/browser/tracticketchainedfieldsplugin?rev=10234">/tracticketchainedfieldsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 887)" href="/browser/bugreporterplugin?rev=887">/bugreporterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9130)" href="/browser/watchlistplugin?rev=9130">/watchlistplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3528)" href="/browser/boilerplateplugin?rev=3528">/boilerplateplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9692)" href="/browser/ticketdeleteplugin?rev=9692">/ticketdeleteplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9861)" href="/browser/allattachmentsmacro?rev=9861">/allattachmentsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6667)" href="/browser/scrumburndownplugin?rev=6667">/scrumburndownplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7112)" href="/browser/adminenumlistplugin?rev=7112">/adminenumlistplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8162)" href="/browser/traccaptchaplugin?rev=8162">/traccaptchaplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9969)" href="/browser/dynamicvariablesplugin?rev=9969">/dynamicvariablesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7838)" href="/browser/visualbasictracconnectorintegration?rev=7838">/visualbasictracconnectorintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5686)" href="/browser/ldapplugin?rev=5686">/ldapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2077)" href="/browser/taskjugglerplugin?rev=2077">/taskjugglerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7964)" href="/browser/testbornintegration?rev=7964">/testbornintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2657)" href="/browser/hgtimelineplugin?rev=2657">/hgtimelineplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10269)" href="/browser/shellexamplemacro?rev=10269">/shellexamplemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10372)" href="/browser/accountmanagerplugin?rev=10372">/accountmanagerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1885)" href="/browser/ticketremindscript?rev=1885">/ticketremindscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7796)" href="/browser/tracwebhooksplugin?rev=7796">/tracwebhooksplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1976)" href="/browser/reportpluginpatch?rev=1976">/reportpluginpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9686)" href="/browser/eggdropticketinfointegration?rev=9686">/eggdropticketinfointegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9658)" href="/browser/tracbacksplugin?rev=9658">/tracbacksplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7602)" href="/browser/extendedcamelcaseplugin?rev=7602">/extendedcamelcaseplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6798)" href="/browser/wikireplaceplugin?rev=6798">/wikireplaceplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/hidevalsplugin?rev=3416">/hidevalsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6203)" href="/browser/sqlitetomysqlscript?rev=6203">/sqlitetomysqlscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5054)" href="/browser/icalexporterplugin?rev=5054">/icalexporterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 857)" href="/browser/basicfieldvalidationpatch?rev=857">/basicfieldvalidationpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 693)" href="/browser/buildbotplugin?rev=693">/buildbotplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4064)" href="/browser/subprojectspatch?rev=4064">/subprojectspatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7102)" href="/browser/repositoryhooksystemplugin?rev=7102">/repositoryhooksystemplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7279)" href="/browser/tickettotracscript?rev=7279">/tickettotracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2155)" href="/browser/dbauthplugin?rev=2155">/dbauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8476)" href="/browser/pledgiemacro?rev=8476">/pledgiemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7787)" href="/browser/mantischangesetbuglinkspatch?rev=7787">/mantischangesetbuglinkspatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6714)" href="/browser/autoupgradeplugin?rev=6714">/autoupgradeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7355)" href="/browser/colormacro?rev=7355">/colormacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4094)" href="/browser/readonlyticketplugin?rev=4094">/readonlyticketplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2333)" href="/browser/tracmentalaxistheme?rev=2333">/tracmentalaxistheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5281)" href="/browser/svnauthzpatch?rev=5281">/svnauthzpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8220)" href="/browser/addstaticresourcesplugin?rev=8220">/addstaticresourcesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7789)" href="/browser/calendarpopupplugin?rev=7789">/calendarpopupplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2346)" href="/browser/lotusnotesparsermacro?rev=2346">/lotusnotesparsermacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9242)" href="/browser/tracajaxcommentsplugin?rev=9242">/tracajaxcommentsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4477)" href="/browser/svnsyncplugin?rev=4477">/svnsyncplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9823)" href="/browser/docrenderplugin?rev=9823">/docrenderplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/wikinfoplugin?rev=3416">/wikinfoplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2307)" href="/browser/inifilestreameditorscript?rev=2307">/inifilestreameditorscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8676)" href="/browser/editfilesplugin?rev=8676">/editfilesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10200)" href="/browser/budgetingplugin?rev=10200">/budgetingplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2933)" href="/browser/djangoauthintegration?rev=2933">/djangoauthintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6594)" href="/browser/tracsnapplugin?rev=6594">/tracsnapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5584)" href="/browser/gridflowplugin?rev=5584">/gridflowplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1036)" href="/browser/tracprojmanagerplugin?rev=1036">/tracprojmanagerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4217)" href="/browser/tracbashrcscript?rev=4217">/tracbashrcscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7747)" href="/browser/ticketsubmitpolicyplugin?rev=7747">/ticketsubmitpolicyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3319)" href="/browser/russiantrachalftranslation?rev=3319">/russiantrachalftranslation</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9249)" href="/browser/tsevetheme?rev=9249">/tsevetheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1248)" href="/browser/tracrblpatch?rev=1248">/tracrblpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8337)" href="/browser/reporevisionsyntaxplugin?rev=8337">/reporevisionsyntaxplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8590)" href="/browser/yumlpreprocessormacro?rev=8590">/yumlpreprocessormacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10203)" href="/browser/wikicalendarmacro?rev=10203">/wikicalendarmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2929)" href="/browser/moveabletypetheme?rev=2929">/moveabletypetheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7159)" href="/browser/luntbuildtracintegration?rev=7159">/luntbuildtracintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7900)" href="/browser/tracdocsplugin?rev=7900">/tracdocsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8683)" href="/browser/dailyreminderscriptfortracscript?rev=8683">/dailyreminderscriptfortracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3311)" href="/browser/tracdownloaderplugin?rev=3311">/tracdownloaderplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9266)" href="/browser/tracwikinegotiatorplugin?rev=9266">/tracwikinegotiatorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1949)" href="/browser/trachtgroupeditorplugin?rev=1949">/trachtgroupeditorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7917)" href="/browser/googlecodetheme?rev=7917">/googlecodetheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7885)" href="/browser/drupalintegration?rev=7885">/drupalintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8465)" href="/browser/dailylolmacro?rev=8465">/dailylolmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10070)" href="/browser/noteboxplugin?rev=10070">/noteboxplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9761)" href="/browser/stractisticsplugin?rev=9761">/stractisticsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3634)" href="/browser/traccasplugin?rev=3634">/traccasplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9994)" href="/browser/perlsqlitetomysqlscript?rev=9994">/perlsqlitetomysqlscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9465)" href="/browser/iniadminplugin?rev=9465">/iniadminplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8457)" href="/browser/componentsprocessormacro?rev=8457">/componentsprocessormacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1152)" href="/browser/wikireadonlyhackpatch?rev=1152">/wikireadonlyhackpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9409)" href="/browser/batchmodifyplugin?rev=9409">/batchmodifyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7365)" href="/browser/emailprocessormacro?rev=7365">/emailprocessormacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10223)" href="/browser/dvbcronrecordingplugin?rev=10223">/dvbcronrecordingplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9921)" href="/browser/minifyplugin?rev=9921">/minifyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10361)" href="/browser/traczoteroplugin?rev=10361">/traczoteroplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8519)" href="/browser/ticketmilestonedisplaymacro?rev=8519">/ticketmilestonedisplaymacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3641)" href="/browser/tgauthplugin?rev=3641">/tgauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6850)" href="/browser/codereviewplugin?rev=6850">/codereviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3458)" href="/browser/privatewikiplugin?rev=3458">/privatewikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9511)" href="/browser/timelinecomponentfilterplugin?rev=9511">/timelinecomponentfilterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9898)" href="/browser/remoteticketplugin?rev=9898">/remoteticketplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7158)" href="/browser/ticketteamdispatcherplugin?rev=7158">/ticketteamdispatcherplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2910)" href="/browser/includepagesplugin?rev=2910">/includepagesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5176)" href="/browser/admintoolkitscript?rev=5176">/admintoolkitscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10016)" href="/browser/googlecalendarplugin?rev=10016">/googlecalendarplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/filenamesearchplugin?rev=3416">/filenamesearchplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5384)" href="/browser/summacro?rev=5384">/summacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9407)" href="/browser/datasaverplugin?rev=9407">/datasaverplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/selfdeleteplugin?rev=3416">/selfdeleteplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7420)" href="/browser/dblclickeditplugin?rev=7420">/dblclickeditplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9639)" href="/browser/peerreviewplugin?rev=9639">/peerreviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9329)" href="/browser/activedirectoryauthplugin?rev=9329">/activedirectoryauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6321)" href="/browser/customselectadminplugin?rev=6321">/customselectadminplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7394)" href="/browser/scriptauthplugin?rev=7394">/scriptauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5254)" href="/browser/tracshellscript?rev=5254">/tracshellscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 176)" href="/browser/debianneedversionmacro?rev=176">/debianneedversionmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7312)" href="/browser/linenomacro?rev=7312">/linenomacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9152)" href="/browser/mindmapmacro?rev=9152">/mindmapmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6391)" href="/browser/websequencediagramplugin?rev=6391">/websequencediagramplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10246)" href="/browser/tracworkflowadminplugin?rev=10246">/tracworkflowadminplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3516)" href="/browser/tracblogplugin?rev=3516">/tracblogplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8545)" href="/browser/extracturlplugin?rev=8545">/extracturlplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9966)" href="/browser/searchallplugin?rev=9966">/searchallplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 773)" href="/browser/wikiworkflowpatch?rev=773">/wikiworkflowpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6314)" href="/browser/componentdependencyplugin?rev=6314">/componentdependencyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7449)" href="/browser/togglemacroplugin?rev=7449">/togglemacroplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7410)" href="/browser/childpagesplugin?rev=7410">/childpagesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1055)" href="/browser/tracpolishtranslation?rev=1055">/tracpolishtranslation</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5520)" href="/browser/usermanagerplugin?rev=5520">/usermanagerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2100)" href="/browser/pagetopdfplugin?rev=2100">/pagetopdfplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7468)" href="/browser/tractabplugin?rev=7468">/tractabplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4532)" href="/browser/tracpicturemanagerplugin?rev=4532">/tracpicturemanagerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10369)" href="/browser/noanonymousplugin?rev=10369">/noanonymousplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5142)" href="/browser/milestoneteamsplugin?rev=5142">/milestoneteamsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8516)" href="/browser/reschedulescript?rev=8516">/reschedulescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7935)" href="/browser/tracwikiprintplugin?rev=7935">/tracwikiprintplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6293)" href="/browser/ticketmoverplugin?rev=6293">/ticketmoverplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5208)" href="/browser/latexpluginmacro?rev=5208">/latexpluginmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4373)" href="/browser/restrictedareaplugin?rev=4373">/restrictedareaplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2229)" href="/browser/searchattachmentsplugin?rev=2229">/searchattachmentsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7865)" href="/browser/tracdupplugin?rev=7865">/tracdupplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10217)" href="/browser/exportimportxlsplugin?rev=10217">/exportimportxlsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4802)" href="/browser/roadmaphoursplugin?rev=4802">/roadmaphoursplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9708)" href="/browser/tracmathjaxplugin?rev=9708">/tracmathjaxplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9430)" href="/browser/fullblogplugin?rev=9430">/fullblogplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7901)" href="/browser/tracstatsplugin?rev=7901">/tracstatsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5833)" href="/browser/bambootracplugin?rev=5833">/bambootracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/similetimelineplugin?rev=3416">/similetimelineplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9473)" href="/browser/hudsontracplugin?rev=9473">/hudsontracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 119)" href="/browser/relationalrolesupportpatch?rev=119">/relationalrolesupportpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1992)" href="/browser/htgroupsplugin?rev=1992">/htgroupsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8548)" href="/browser/googlewebmasterverifyplugin?rev=8548">/googlewebmasterverifyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7816)" href="/browser/flexiblewikiplugin?rev=7816">/flexiblewikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 295)" href="/browser/wikieditorscript?rev=295">/wikieditorscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/datamoverplugin?rev=3416">/datamoverplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1664)" href="/browser/navigationmenuplugin?rev=1664">/navigationmenuplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3870)" href="/browser/registrationconfirmationpatch?rev=3870">/registrationconfirmationpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8553)" href="/browser/shortcuticonplugin?rev=8553">/shortcuticonplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2146)" href="/browser/tractrailplugin?rev=2146">/tractrailplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 771)" href="/browser/foldingmacro?rev=771">/foldingmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8290)" href="/browser/overrideeditplugin?rev=8290">/overrideeditplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9457)" href="/browser/hgdirmanagerplugin?rev=9457">/hgdirmanagerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8445)" href="/browser/evidenceschedulingplugin?rev=8445">/evidenceschedulingplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9813)" href="/browser/announcerplugin?rev=9813">/announcerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8307)" href="/browser/collapsibleplugin?rev=8307">/collapsibleplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9343)" href="/browser/tracreleaseplugin?rev=9343">/tracreleaseplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8277)" href="/browser/privatecommentplugin?rev=8277">/privatecommentplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7170)" href="/browser/mailtotracplugin?rev=7170">/mailtotracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6400)" href="/browser/page2docbookplugin?rev=6400">/page2docbookplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 617)" href="/browser/ticketwithsummarymacro?rev=617">/ticketwithsummarymacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7887)" href="/browser/blackmagictickettweaksplugin?rev=7887">/blackmagictickettweaksplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2092)" href="/browser/ldapwhitepagesplugin?rev=2092">/ldapwhitepagesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4051)" href="/browser/extlinkrewriterplugin?rev=4051">/extlinkrewriterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10295)" href="/browser/ticketaccessplugin?rev=10295">/ticketaccessplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6532)" href="/browser/schedulingtoolsplugin?rev=6532">/schedulingtoolsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7750)" href="/browser/tracquickplugintemplatescript?rev=7750">/tracquickplugintemplatescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/macropostplugin?rev=3416">/macropostplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7442)" href="/browser/latesttweetmacro?rev=7442">/latesttweetmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 715)" href="/browser/pagelistplugin?rev=715">/pagelistplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6499)" href="/browser/siteuploadplugin?rev=6499">/siteuploadplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2197)" href="/browser/emailtotracscript?rev=2197">/emailtotracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10324)" href="/browser/sharingbuttonsplugin?rev=10324">/sharingbuttonsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9899)" href="/browser/gtkdocplugin?rev=9899">/gtkdocplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6590)" href="/browser/scarabtotracscript?rev=6590">/scarabtotracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8541)" href="/browser/advparseargsplugin?rev=8541">/advparseargsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8544)" href="/browser/externallinksnewwindowplugin?rev=8544">/externallinksnewwindowplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5074)" href="/browser/markdownmacro?rev=5074">/markdownmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6286)" href="/browser/securepluginpanelplugin?rev=6286">/securepluginpanelplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6810)" href="/browser/wikieditorforeclipseplugin?rev=6810">/wikieditorforeclipseplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10075)" href="/browser/multipleworkflowplugin?rev=10075">/multipleworkflowplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8368)" href="/browser/tracdependencyplugin?rev=8368">/tracdependencyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7801)" href="/browser/flashembedmacro?rev=7801">/flashembedmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6358)" href="/browser/manpagerendererplugin?rev=6358">/manpagerendererplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5201)" href="/browser/multisortreportpatch?rev=5201">/multisortreportpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9962)" href="/browser/advancedticketworkflowplugin?rev=9962">/advancedticketworkflowplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 238)" href="/browser/interwikiplugin?rev=238">/interwikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/fakeusernameplugin?rev=3416">/fakeusernameplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8403)" href="/browser/latexformulamacro?rev=8403">/latexformulamacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 119)" href="/browser/tracshowpathpatch?rev=119">/tracshowpathpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6337)" href="/browser/tracmilemixviewplugin?rev=6337">/tracmilemixviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8874)" href="/browser/contextmenuplugin?rev=8874">/contextmenuplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6953)" href="/browser/tracplugintemplatescript?rev=6953">/tracplugintemplatescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1142)" href="/browser/glossarybuilderplugin?rev=1142">/glossarybuilderplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9926)" href="/browser/traccronplugin?rev=9926">/traccronplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8057)" href="/browser/revtreeplugin?rev=8057">/revtreeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10014)" href="/browser/fullblognotificationplugin?rev=10014">/fullblognotificationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7526)" href="/browser/wikitablemacro?rev=7526">/wikitablemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10230)" href="/browser/ticketimportplugin?rev=10230">/ticketimportplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3890)" href="/browser/tracmergescript?rev=3890">/tracmergescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3308)" href="/browser/extendedfieldpropertiesplugin?rev=3308">/extendedfieldpropertiesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7403)" href="/browser/tracstorypointsplugin?rev=7403">/tracstorypointsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4211)" href="/browser/pendingticketplugin?rev=4211">/pendingticketplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5134)" href="/browser/wikidocplugin?rev=5134">/wikidocplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6969)" href="/browser/tracviewscript?rev=6969">/tracviewscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5453)" href="/browser/canvizplugin?rev=5453">/canvizplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9754)" href="/browser/changelogmacro?rev=9754">/changelogmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7642)" href="/browser/pagetodocintegration?rev=7642">/pagetodocintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10020)" href="/browser/awesomeattachmentsplugin?rev=10020">/awesomeattachmentsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3603)" href="/browser/hackinstallplugin?rev=3603">/hackinstallplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10082)" href="/browser/estimationtoolsplugin?rev=10082">/estimationtoolsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1964)" href="/browser/wikiprivatepatch?rev=1964">/wikiprivatepatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7968)" href="/browser/tracdeveloperplugin?rev=7968">/tracdeveloperplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5681)" href="/browser/pdfrendererplugin?rev=5681">/pdfrendererplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2891)" href="/browser/twittracscript?rev=2891">/twittracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8349)" href="/browser/resourcereservationplugin?rev=8349">/resourcereservationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7494)" href="/browser/arbitraryoptionsplugin?rev=7494">/arbitraryoptionsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3323)" href="/browser/timevisualizerplugin?rev=3323">/timevisualizerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8251)" href="/browser/ticketownergrouppatch?rev=8251">/ticketownergrouppatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1076)" href="/browser/maventracplugin?rev=1076">/maventracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/unixgroupsplugin?rev=3416">/unixgroupsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7428)" href="/browser/tractoprojectplugin?rev=7428">/tractoprojectplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2908)" href="/browser/randomincludeplugin?rev=2908">/randomincludeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5672)" href="/browser/tracsysgroupsplugin?rev=5672">/tracsysgroupsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10236)" href="/browser/tracsuposeplugin?rev=10236">/tracsuposeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10185)" href="/browser/ticketnavplugin?rev=10185">/ticketnavplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9058)" href="/browser/privatereportsplugin?rev=9058">/privatereportsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5597)" href="/browser/cannedresponsesplugin?rev=5597">/cannedresponsesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/projectmenuplugin?rev=3416">/projectmenuplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6049)" href="/browser/traccosignplugin?rev=6049">/traccosignplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2213)" href="/browser/mantisimportscript?rev=2213">/mantisimportscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7514)" href="/browser/superuserplugin?rev=7514">/superuserplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9922)" href="/browser/twillprocessormacro?rev=9922">/twillprocessormacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6743)" href="/browser/wantedpagesplugin?rev=6743">/wantedpagesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/personalreportsplugin?rev=3416">/personalreportsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8645)" href="/browser/dirclassmacro?rev=8645">/dirclassmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 978)" href="/browser/webadminusersplugin?rev=978">/webadminusersplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8281)" href="/browser/googlechromeextentionplugin?rev=8281">/googlechromeextentionplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8021)" href="/browser/tracsqlplugin?rev=8021">/tracsqlplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7818)" href="/browser/ldapauthnzplugin?rev=7818">/ldapauthnzplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2931)" href="/browser/twikipatternskintheme?rev=2931">/twikipatternskintheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4674)" href="/browser/teamcalendarplugin?rev=4674">/teamcalendarplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7193)" href="/browser/datefieldplugin?rev=7193">/datefieldplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9532)" href="/browser/traccmdscript?rev=9532">/traccmdscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9222)" href="/browser/tracajaxqueryplugin?rev=9222">/tracajaxqueryplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4111)" href="/browser/navcontrolplugin?rev=4111">/navcontrolplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/authformplugin?rev=3416">/authformplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4534)" href="/browser/citemacro?rev=4534">/citemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 791)" href="/browser/pgschemapatch?rev=791">/pgschemapatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9002)" href="/browser/tracfacebookpluginsmacro?rev=9002">/tracfacebookpluginsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6318)" href="/browser/tracgvizplugin?rev=6318">/tracgvizplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4750)" href="/browser/wikirenameplugin?rev=4750">/wikirenameplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9517)" href="/browser/tracmypageplugin?rev=9517">/tracmypageplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3183)" href="/browser/tracsvnauthzplugin?rev=3183">/tracsvnauthzplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5048)" href="/browser/loggedinscript?rev=5048">/loggedinscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8521)" href="/browser/javadocwikimacro?rev=8521">/javadocwikimacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/consultanttheme?rev=3416">/consultanttheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2950)" href="/browser/forcepreviewplugin?rev=2950">/forcepreviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1635)" href="/browser/delegatedwikiplugin?rev=1635">/delegatedwikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8563)" href="/browser/progressmetermacro?rev=8563">/progressmetermacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10271)" href="/browser/ckeditorplugin?rev=10271">/ckeditorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9769)" href="/browser/metamacroplugin?rev=9769">/metamacroplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7131)" href="/browser/autolinksplugin?rev=7131">/autolinksplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10232)" href="/browser/narcissusplugin?rev=10232">/narcissusplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6444)" href="/browser/mscgenplugin?rev=6444">/mscgenplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7211)" href="/browser/accountmanageraccouncementplugin?rev=7211">/accountmanageraccouncementplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2357)" href="/browser/multipleprojectqueryfilterplugin?rev=2357">/multipleprojectqueryfilterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7797)" href="/browser/restontracplugin?rev=7797">/restontracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6382)" href="/browser/branchtimelineplugin?rev=6382">/branchtimelineplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4153)" href="/browser/virtualticketpermissionsplugin?rev=4153">/virtualticketpermissionsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 119)" href="/browser/adminconsoleproviderpatch?rev=119">/adminconsoleproviderpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7628)" href="/browser/protectedmacro?rev=7628">/protectedmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6430)" href="/browser/pdfredirectorplugin?rev=6430">/pdfredirectorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7990)" href="/browser/metapostplugin?rev=7990">/metapostplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4890)" href="/browser/freemindmacro?rev=4890">/freemindmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9535)" href="/browser/wikiquerymacro?rev=9535">/wikiquerymacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 750)" href="/browser/freemindembeddingtutorial?rev=750">/freemindembeddingtutorial</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2728)" href="/browser/svgmacro?rev=2728">/svgmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5935)" href="/browser/jabbertracscript?rev=5935">/jabbertracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8052)" href="/browser/tracplantumlplugin?rev=8052">/tracplantumlplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6230)" href="/browser/rssembedmacro?rev=6230">/rssembedmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9981)" href="/browser/queuesplugin?rev=9981">/queuesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3358)" href="/browser/checklistplugin?rev=3358">/checklistplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6740)" href="/browser/tracexampletheme?rev=6740">/tracexampletheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8159)" href="/browser/tracsqlhelperscript?rev=8159">/tracsqlhelperscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1136)" href="/browser/windowsservicescript?rev=1136">/windowsservicescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9877)" href="/browser/discussionplugin?rev=9877">/discussionplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5810)" href="/browser/precodebrowserplugin?rev=5810">/precodebrowserplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3018)" href="/browser/testingworkflow?rev=3018">/testingworkflow</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5995)" href="/browser/graphvizplugin?rev=5995">/graphvizplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9719)" href="/browser/sumfieldsplugin?rev=9719">/sumfieldsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9950)" href="/browser/scrippetmacro?rev=9950">/scrippetmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7769)" href="/browser/imagetracplugin?rev=7769">/imagetracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8552)" href="/browser/serversideredirectplugin?rev=8552">/serversideredirectplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9419)" href="/browser/tagsplugin?rev=9419">/tagsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9366)" href="/browser/slideshowplugin?rev=9366">/slideshowplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6586)" href="/browser/tracowldocplugin?rev=6586">/tracowldocplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 393)" href="/browser/authzwebadminplugin?rev=393">/authzwebadminplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10251)" href="/browser/tracbibplugin?rev=10251">/tracbibplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7310)" href="/browser/wikinavmapplugin?rev=7310">/wikinavmapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9648)" href="/browser/loginrequiredplugin?rev=9648">/loginrequiredplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8100)" href="/browser/diavisviewplugin?rev=8100">/diavisviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6328)" href="/browser/doxygenplugin?rev=6328">/doxygenplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2012)" href="/browser/pydocplugin?rev=2012">/pydocplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1727)" href="/browser/openidplugin?rev=1727">/openidplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6285)" href="/browser/contactformplugin?rev=6285">/contactformplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3045)" href="/browser/modwsgiacctmgrscript?rev=3045">/modwsgiacctmgrscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5072)" href="/browser/inlinemacro?rev=5072">/inlinemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4179)" href="/browser/masterticketsplugin?rev=4179">/masterticketsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8329)" href="/browser/depgraphsidebarplugin?rev=8329">/depgraphsidebarplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8294)" href="/browser/gitoriousplugin?rev=8294">/gitoriousplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1081)" href="/browser/tracistanplugin?rev=1081">/tracistanplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9560)" href="/browser/littlemarytheme?rev=9560">/littlemarytheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7713)" href="/browser/lightgreentheme?rev=7713">/lightgreentheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4713)" href="/browser/gnomebrtheme?rev=4713">/gnomebrtheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4746)" href="/browser/googlechartplugin?rev=4746">/googlechartplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9846)" href="/browser/recaptcharegisterplugin?rev=9846">/recaptcharegisterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8483)" href="/browser/ohlohbadgemacro?rev=8483">/ohlohbadgemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10228)" href="/browser/tracformsplugin?rev=10228">/tracformsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9802)" href="/browser/backlogplugin?rev=9802">/backlogplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10358)" href="/browser/groupingassigntoplugin?rev=10358">/groupingassigntoplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10004)" href="/browser/tracticketchangesetsplugin?rev=10004">/tracticketchangesetsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 374)" href="/browser/wikinotifyscript?rev=374">/wikinotifyscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6509)" href="/browser/svntarballplugin?rev=6509">/svntarballplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7879)" href="/browser/jobcontrolplugin?rev=7879">/jobcontrolplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10108)" href="/browser/vcsreleaseinfomacro?rev=10108">/vcsreleaseinfomacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4225)" href="/browser/svnurlsplugin?rev=4225">/svnurlsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 569)" href="/browser/newcustomfieldspatch?rev=569">/newcustomfieldspatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9942)" href="/browser/tracticketstatsplugin?rev=9942">/tracticketstatsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8492)" href="/browser/entitymacro?rev=8492">/entitymacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6495)" href="/browser/traccreatewebuiscript?rev=6495">/traccreatewebuiscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7116)" href="/browser/gliffymacro?rev=7116">/gliffymacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2323)" href="/browser/tracwsgiplugin?rev=2323">/tracwsgiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4969)" href="/browser/regexlinkplugin?rev=4969">/regexlinkplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9652)" href="/browser/milestonequerymacro?rev=9652">/milestonequerymacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2915)" href="/browser/citytracscript?rev=2915">/citytracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5293)" href="/browser/defaultccplugin?rev=5293">/defaultccplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1980)" href="/browser/excelreportplugin?rev=1980">/excelreportplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9842)" href="/browser/tickettosalesforceplugin?rev=9842">/tickettosalesforceplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7591)" href="/browser/flattablemacro?rev=7591">/flattablemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6253)" href="/browser/trackerfortracintegration?rev=6253">/trackerfortracintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7149)" href="/browser/irclogsplugin?rev=7149">/irclogsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2573)" href="/browser/camelcaseaaintegration?rev=2573">/camelcaseaaintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1349)" href="/browser/firestatsplugin?rev=1349">/firestatsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9668)" href="/browser/wikiticketcalendarmacro?rev=9668">/wikiticketcalendarmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6457)" href="/browser/tracciaplugin?rev=6457">/tracciaplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9410)" href="/browser/estimatorplugin?rev=9410">/estimatorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7204)" href="/browser/robotstxtplugin?rev=7204">/robotstxtplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8486)" href="/browser/perlpodmacro?rev=8486">/perlpodmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8076)" href="/browser/cmtekniktheme?rev=8076">/cmtekniktheme</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9816)" href="/browser/sectioneditplugin?rev=9816">/sectioneditplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4065)" href="/browser/mathcapthaplugin?rev=4065">/mathcapthaplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7873)" href="/browser/redirectionsystemplugin?rev=7873">/redirectionsystemplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9561)" href="/browser/tracdragdropplugin?rev=9561">/tracdragdropplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3650)" href="/browser/tracforgeplugin?rev=3650">/tracforgeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8543)" href="/browser/dashessyntaxplugin?rev=8543">/dashessyntaxplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5683)" href="/browser/smtpdefaultdomainpatch?rev=5683">/smtpdefaultdomainpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9752)" href="/browser/tracmetrixplugin?rev=9752">/tracmetrixplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/easterplugin?rev=3416">/easterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9351)" href="/browser/projectsmanagerplugin?rev=9351">/projectsmanagerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4186)" href="/browser/permredirectplugin?rev=4186">/permredirectplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2530)" href="/browser/nikocalemacro?rev=2530">/nikocalemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2023)" href="/browser/diaviewplugin?rev=2023">/diaviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9908)" href="/browser/googletranslateplugin?rev=9908">/googletranslateplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6032)" href="/browser/tracdocbookplugin?rev=6032">/tracdocbookplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4989)" href="/browser/flashganttplugin?rev=4989">/flashganttplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9349)" href="/browser/wikicreateticketplugin?rev=9349">/wikicreateticketplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3315)" href="/browser/siblingnavplugin?rev=3315">/siblingnavplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10338)" href="/browser/attachmentpolicyplugin?rev=10338">/attachmentpolicyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8475)" href="/browser/pollmacro?rev=8475">/pollmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8515)" href="/browser/milestonecompactmacro?rev=8515">/milestonecompactmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8182)" href="/browser/googleanalyticsintegration?rev=8182">/googleanalyticsintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4199)" href="/browser/traditionalchinesetranslation?rev=4199">/traditionalchinesetranslation</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9780)" href="/browser/tracwikitopdfplugin?rev=9780">/tracwikitopdfplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1138)" href="/browser/truehttplogoutpatch?rev=1138">/truehttplogoutpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9559)" href="/browser/qrcodeplugin?rev=9559">/qrcodeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7423)" href="/browser/tracsemanticplugin?rev=7423">/tracsemanticplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1888)" href="/browser/tracfrenchtranslation?rev=1888">/tracfrenchtranslation</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4871)" href="/browser/ankurplugin?rev=4871">/ankurplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9625)" href="/browser/autocompleteusersplugin?rev=9625">/autocompleteusersplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3265)" href="/browser/metatrackerpluginmacro?rev=3265">/metatrackerpluginmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9631)" href="/browser/autointertracplugin?rev=9631">/autointertracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3396)" href="/browser/mointotracscript?rev=3396">/mointotracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9676)" href="/browser/tracwysiwygplugin?rev=9676">/tracwysiwygplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 119)" href="/browser/debianbtsmacro?rev=119">/debianbtsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8572)" href="/browser/bittenforgitplugin?rev=8572">/bittenforgitplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5398)" href="/browser/tracbuildbotintegration?rev=5398">/tracbuildbotintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10247)" href="/browser/beanstalkplugin?rev=10247">/beanstalkplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8342)" href="/browser/intertraccommitpatch?rev=8342">/intertraccommitpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4873)" href="/browser/savedqueriesscript?rev=4873">/savedqueriesscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9323)" href="/browser/reposreadmeplugin?rev=9323">/reposreadmeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6717)" href="/browser/perforcejobscript?rev=6717">/perforcejobscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9776)" href="/browser/bittenlintannotateplugin?rev=9776">/bittenlintannotateplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8374)" href="/browser/exowebcodereviewplugin?rev=8374">/exowebcodereviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10202)" href="/browser/attachfilterplugin?rev=10202">/attachfilterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10270)" href="/browser/dynamicfieldsplugin?rev=10270">/dynamicfieldsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 359)" href="/browser/workflowpatch?rev=359">/workflowpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7272)" href="/browser/tracpublisherscript?rev=7272">/tracpublisherscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7082)" href="/browser/tracpadplugin?rev=7082">/tracpadplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5060)" href="/browser/ragestoryplugin?rev=5060">/ragestoryplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5481)" href="/browser/includesourcepartialplugin?rev=5481">/includesourcepartialplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10166)" href="/browser/mailplugin?rev=10166">/mailplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9337)" href="/browser/traciniadminpanelplugin?rev=9337">/traciniadminpanelplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10197)" href="/browser/roadmapplugin?rev=10197">/roadmapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8276)" href="/browser/hideablequeryplugin?rev=8276">/hideablequeryplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7413)" href="/browser/tractweakuiplugin?rev=7413">/tractweakuiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3314)" href="/browser/pagetoodtplugin?rev=3314">/pagetoodtplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9445)" href="/browser/ccselectorplugin?rev=9445">/ccselectorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8247)" href="/browser/hotkeysplugin?rev=8247">/hotkeysplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6287)" href="/browser/traccodeprocessormacro?rev=6287">/traccodeprocessormacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4837)" href="/browser/subversionlocationplugin?rev=4837">/subversionlocationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3945)" href="/browser/createpluginscript?rev=3945">/createpluginscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7741)" href="/browser/themeengineplugin?rev=7741">/themeengineplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9205)" href="/browser/codeexamplemacro?rev=9205">/codeexamplemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1925)" href="/browser/autowikifyplugin?rev=1925">/autowikifyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/tracrewriteplugin?rev=3416">/tracrewriteplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4474)" href="/browser/showpathplugin?rev=4474">/showpathplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2916)" href="/browser/tractagsxmlrpcplugin?rev=2916">/tractagsxmlrpcplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8987)" href="/browser/screenshotsplugin?rev=8987">/screenshotsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8450)" href="/browser/footnotemacro?rev=8450">/footnotemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7253)" href="/browser/icalviewplugin?rev=7253">/icalviewplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5387)" href="/browser/editorguideplugin?rev=5387">/editorguideplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9327)" href="/browser/tracautocompleteplugin?rev=9327">/tracautocompleteplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8649)" href="/browser/googlemapmacro?rev=8649">/googlemapmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7440)" href="/browser/stackoverflowbadgemacro?rev=7440">/stackoverflowbadgemacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9721)" href="/browser/tracqueuesplugin?rev=9721">/tracqueuesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7504)" href="/browser/plannedmilestonesmacro?rev=7504">/plannedmilestonesmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8058)" href="/browser/traclegosscript?rev=8058">/traclegosscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8517)" href="/browser/taskticketsmacro?rev=8517">/taskticketsmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1479)" href="/browser/drprojectpatch?rev=1479">/drprojectpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3065)" href="/browser/breadcrumbsnavplugin?rev=3065">/breadcrumbsnavplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1703)" href="/browser/svncchelpersscript?rev=1703">/svncchelpersscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7853)" href="/browser/perforceplugin?rev=7853">/perforceplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10162)" href="/browser/tracadvancedsearchplugin?rev=10162">/tracadvancedsearchplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7643)" href="/browser/listracscript?rev=7643">/listracscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7439)" href="/browser/renametracusersscript?rev=7439">/renametracusersscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2238)" href="/browser/trac2latexplugin?rev=2238">/trac2latexplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8542)" href="/browser/attachmentnummacro?rev=8542">/attachmentnummacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7133)" href="/browser/tracsitemapplugin?rev=7133">/tracsitemapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3162)" href="/browser/ldapanonymousintegration?rev=3162">/ldapanonymousintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6041)" href="/browser/multitracstatisticsplugin?rev=6041">/multitracstatisticsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10056)" href="/browser/workfloweditorplugin?rev=10056">/workfloweditorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8377)" href="/browser/autotracplugin?rev=8377">/autotracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9568)" href="/browser/googleappsauthplugin?rev=9568">/googleappsauthplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3127)" href="/browser/teamrosterplugin?rev=3127">/teamrosterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 762)" href="/browser/localizationpatch?rev=762">/localizationpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 942)" href="/browser/continutracplugin?rev=942">/continutracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1298)" href="/browser/flexjsplugin?rev=1298">/flexjsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8348)" href="/browser/testmanagerfortracplugin?rev=8348">/testmanagerfortracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8441)" href="/browser/underscorewikiplugin?rev=8441">/underscorewikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/boxdbplugin?rev=3416">/boxdbplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 859)" href="/browser/gullibleauthenticationplugin?rev=859">/gullibleauthenticationplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2855)" href="/browser/authopenidplugin?rev=2855">/authopenidplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7532)" href="/browser/tracnavmacro?rev=7532">/tracnavmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7425)" href="/browser/tracrpcprotocolsplugin?rev=7425">/tracrpcprotocolsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8595)" href="/browser/linkedinmacrosmacro?rev=8595">/linkedinmacrosmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/modauthacctmgrscript?rev=3416">/modauthacctmgrscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2516)" href="/browser/calendarplugin?rev=2516">/calendarplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 965)" href="/browser/rssgetmacro?rev=965">/rssgetmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 119)" href="/browser/anchorpatch?rev=119">/anchorpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7954)" href="/browser/hierwikiplugin?rev=7954">/hierwikiplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8232)" href="/browser/loomingcloudsplugin?rev=8232">/loomingcloudsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2206)" href="/browser/tracslimtimerplugin?rev=2206">/tracslimtimerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6491)" href="/browser/anjlabsyncitplugin?rev=6491">/anjlabsyncitplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 10255)" href="/browser/tracjsganttplugin?rev=10255">/tracjsganttplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1736)" href="/browser/platformdeploymentplugin?rev=1736">/platformdeploymentplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2563)" href="/browser/teamtracintegration?rev=2563">/teamtracintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6272)" href="/browser/jiratotracintegration?rev=6272">/jiratotracintegration</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4992)" href="/browser/googletranslatetimelinescript?rev=4992">/googletranslatetimelinescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4366)" href="/browser/tocmacro?rev=4366">/tocmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7961)" href="/browser/roadmapfilterplugin?rev=7961">/roadmapfilterplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3676)" href="/browser/ticketvalidatorplugin?rev=3676">/ticketvalidatorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7144)" href="/browser/finegrainedpageauthzeditorplugin?rev=7144">/finegrainedpageauthzeditorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7914)" href="/browser/xsltmacro?rev=7914">/xsltmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1187)" href="/browser/csvmacro?rev=1187">/csvmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4056)" href="/browser/burndownplugin?rev=4056">/burndownplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 3416)" href="/browser/ctxtnavaddplugin?rev=3416">/ctxtnavaddplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 5298)" href="/browser/ittecotracplugin?rev=5298">/ittecotracplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9914)" href="/browser/clientsplugin?rev=9914">/clientsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2462)" href="/browser/authrequiredplugin?rev=2462">/authrequiredplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 128)" href="/browser/generallinksyntaxplugin?rev=128">/generallinksyntaxplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9735)" href="/browser/hidechangesplugin?rev=9735">/hidechangesplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7518)" href="/browser/tracticketvalidatorplugin?rev=7518">/tracticketvalidatorplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 119)" href="/browser/servicescript?rev=119">/servicescript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9267)" href="/browser/extendedversionplugin?rev=9267">/extendedversionplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8647)" href="/browser/lastmodifiedmacro?rev=8647">/lastmodifiedmacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9865)" href="/browser/anchormacro?rev=9865">/anchormacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1500)" href="/browser/secsessionplugin?rev=1500">/secsessionplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6602)" href="/browser/ldapauthstoreplugin?rev=6602">/ldapauthstoreplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6336)" href="/browser/tracreportmanagerplugin?rev=6336">/tracreportmanagerplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7181)" href="/browser/tracterminologyplugin?rev=7181">/tracterminologyplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2903)" href="/browser/wikistatsplugin?rev=2903">/wikistatsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8487)" href="/browser/statusindicatormacro?rev=8487">/statusindicatormacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9815)" href="/browser/openofficetotracwikiscript?rev=9815">/openofficetotracwikiscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6551)" href="/browser/menusplugin?rev=6551">/menusplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8485)" href="/browser/sqlquerymacro?rev=8485">/sqlquerymacro</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 8075)" href="/browser/captchaauthplusplugin?rev=8075">/captchaauthplusplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 6904)" href="/browser/activedirectorylookuppatch?rev=6904">/activedirectorylookuppatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 2717)" href="/browser/breadcrumbtrailsscript?rev=2717">/breadcrumbtrailsscript</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1115)" href="/browser/httploginviaredirectpatch?rev=1115">/httploginviaredirectpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 4677)" href="/browser/sqlconstantsplugin?rev=4677">/sqlconstantsplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 1971)" href="/browser/excelreportpatch?rev=1971">/excelreportpatch</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 7223)" href="/browser/pytppthemeplugin?rev=7223">/pytppthemeplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  
+   <li>
+  <div class="rem"></div>
+   <a title="Show what was removed (rev. 9514)" href="/browser/googlesitemapplugin?rev=9514">/googlesitemapplugin</a>
+  <span class="comment">(deleted)</span>
+
+   </li>
+  </ul>
+ </dd>
+</dl>
+
+<div class="diff">
+ <div id="legend">
+  <h3>Legend:</h3>
+  <dl>
+   <dt class="unmod"></dt><dd>Unmodified</dd>
+   <dt class="add"></dt><dd>Added</dd>
+   <dt class="rem"></dt><dd>Removed</dd>
+   <dt class="mod"></dt><dd>Modified</dd>
+   <dt class="cp"></dt><dd>Copied</dd>
+   <dt class="mv"></dt><dd>Moved</dd>
+  </dl>
+ </div>
+ <ul class="entries"></ul>
+</div>
+
+</div>
+<script type="text/javascript">searchHighlight()</script>
+<div id="altlinks"><h3>Download in other formats:</h3><ul><li class="first"><a href="?format=diff&amp;new=10373&amp;old=10373&amp;new_path=ticketdeleteplugin&amp;old_path=%2F" class="diff">Unified Diff</a></li><li class="last"><a href="?format=zip&amp;new=10373&amp;old=10373&amp;new_path=ticketdeleteplugin&amp;old_path=%2F" class="zip">Zip Archive</a></li></ul></div>
+
+</div>
+
+<div id="footer">
+ <hr />
+ <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107"
+   alt="Trac Powered"/></a>
+ <p class="left">
+  Powered by <a href="/about"><strong>Trac 0.10.6dev</strong></a><br />
+  By <a href="http://www.edgewall.org/">Edgewall Software</a>.
+ </p>
+ <p class="right">
+  Hosting sponsored by <a href="http://www.tgc.de" style="border-bottom: 0;"><img src="/chrome/site/tgc-logo-30x210.png" alt="true global communications GmbH" /></a>
+ </p>
+</div>
+
+
+
+ </body>
+</html>
+

@@ -1,0 +1,3 @@
+[trac.plugins]
+ticketdelete.web_ui = ticketdelete.web_ui
+

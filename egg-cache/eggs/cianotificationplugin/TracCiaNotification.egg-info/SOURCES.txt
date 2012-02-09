@@ -1,0 +1,10 @@
+README.txt
+setup.py
+TracCiaNotification.egg-info/PKG-INFO
+TracCiaNotification.egg-info/SOURCES.txt
+TracCiaNotification.egg-info/dependency_links.txt
+TracCiaNotification.egg-info/entry_points.txt
+TracCiaNotification.egg-info/requires.txt
+TracCiaNotification.egg-info/top_level.txt
+cianotification/__init__.py
+cianotification/notifier.py

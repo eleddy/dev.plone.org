@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/7096/accountldapplugin/0.12
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/7095/accountldapplugin/0.12/.project
+END
+setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/7095/accountldapplugin/0.12/setup.py
+END
+NEWS.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/7095/accountldapplugin/0.12/NEWS.TXT
+END
+README.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/4493/accountldapplugin/0.12/README.TXT
+END

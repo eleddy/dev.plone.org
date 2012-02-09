@@ -1,0 +1,13 @@
+AUTHORS
+COPYING
+setup.cfg
+setup.py
+LdapPlugin.egg-info/PKG-INFO
+LdapPlugin.egg-info/SOURCES.txt
+LdapPlugin.egg-info/dependency_links.txt
+LdapPlugin.egg-info/entry_points.txt
+LdapPlugin.egg-info/requires.txt
+LdapPlugin.egg-info/top_level.txt
+ldapplugin/__init__.py
+ldapplugin/api.py
+ldapplugin/tests/api.py

@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: TracSubversionLocation
+Version: 1.0.1
+Summary: Provide links to the actual URLs of Subversion-dwelling items
+Home-page: http://trac-hacks.org/wiki/SubversionLocationPlugin
+Author: Erik Rose
+Author-email: ErikRose@psu.edu
+License: GPL
+Description: UNKNOWN
+Keywords: trac plugin svn subversion
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

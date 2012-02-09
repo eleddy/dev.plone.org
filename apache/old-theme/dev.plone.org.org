@@ -1,0 +1,11 @@
+import os
+
+rootpath = "/var/lib/trac/dev.plone.org"
+# docroot  = rootpath + "/htdocs"
+
+os.environ['PYTHON_EGG_CACHE'] = os.path.join(rootpath, os.pardir, "egg-cache")
+
+import trac.web.main
+def application(env, start_response):
+    env['trac.env_path'] = rootpath
+    return trac.web.main.dispatch_request(env, start_response)
