@@ -1,0 +1,11 @@
+.installed.cfg
+.mr.developer.cfg
+*.svn
+*.pyc
+parts
+develop-eggs
+bin
+src/accountldapplugin
+src/advancedticketworkflowplugin
+src/ldapplugun
+eggs
